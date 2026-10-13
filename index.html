@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f5b">
+  <title>EarnConnect</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f7f5;
+      color: #18352b;
+    }
+    header {
+      background: #087f5b;
+      color: white;
+      padding: 24px 18px;
+    }
+    header h1 { margin: 0 0 8px; }
+    header p { margin: 0; }
+    main {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 16px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px #0000000c;
+    }
+    button {
+      border: 0;
+      border-radius: 8px;
+      background: #087f5b;
+      color: white;
+      padding: 13px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0 14px;
+      border: 1px solid #ccd8d1;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .muted { color: #64756d; font-size: 14px; }
+    .amount { font-size: 28px; font-weight: bold; }
+    footer { text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌱 EarnConnect</h1>
+    <p>Connect. Refer. Earn.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Welcome to EarnConnect!</h2>
+      <p>Discover referral opportunities and track eligible rewards.</p>
+      <p class="muted">Rewards depend on verified referrals and partner terms.</p>
+    </section>
+
+    <section class="card">
+      <h2>Create your account</h2>
+      <form id="signup">
+        <label for="name">Your name</label>
+        <input id="name" required placeholder="Enter your name">
+        <label for="email">Email address</label>
+        <input id="email" type="email" required placeholder="Enter your email">
+        <button type="submit">Get started</button>
+      </form>
+      <p id="message" role="status"></p>
+      <p class="muted">Demo only: this form does not save accounts yet.</p>
+    </section>
+
+    <section class="card">
+      <h2>Your dashboard</h2>
+      <p>Verified referrals</p>
+      <div class="amount" id="referrals">0</div>
+      <p>Confirmed commissions</p>
+      <div class="amount">₵0.00</div>
+      <p class="muted">Your earnings will appear after verified partner activity.</p>
+    </section>
+
+    <section class="card">
+      <h2>Partner opportunities</h2>
+      <p>No partner offers have been added yet.</p>
+      <p class="muted">Real offers will appear here after partnerships are confirmed.</p>
+    </section>
+  </main>
+
+  <footer class="muted">EarnConnect © 2026</footer>
+
+  <script>
+    document.getElementById("signup").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("message").textContent =
+        "Welcome, " + document.getElementById("name").value +
+        "! This is a demo. Account creation is not active yet.";
+    });
+  </script>
+</body>
+</html>
+  
